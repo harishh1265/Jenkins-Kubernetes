@@ -8,5 +8,5 @@ RUN tar -xzf apache-tomcat-8.5.77.tar.gz
 RUN mv apache-tomcat-8.5.77 tomcat
 WORKDIR /tomcat/webapps/
 COPY /target/hello-world-war-1.0.0.war /home/ubuntu/test/
-COPY /home/ubuntu/test/hello-world-war-1.0.0.war /tomcat/webapps
+COPY ./hello-world-war-1.0.0.war /tomcat/webapps
 CMD ["/tomcat/bin/catalina.sh","run"]
